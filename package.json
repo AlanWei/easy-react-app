@@ -3,7 +3,22 @@
   "version": "0.1.0",
   "description": "CLI tool for easily creating React applications",
   "main": "index.js",
+  "preferGlobal": true,
+  "bin": "lib/index.js",
   "repository": "git@github.com:AlanWei/easyreact.git",
   "author": "Alan Wei <alanweichangran@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "BABEL_ENV=development babel src -d build --watch",
+    "lint": "eslint src",
+    "build": "yarn clean && BABEL_ENV=production babel src -d lib",
+    "clean": "rm -rf build/ coverage/ lib/",
+    "pre:release": "chmod 755 lib/index.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1"
+  }
 }
