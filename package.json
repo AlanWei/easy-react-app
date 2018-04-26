@@ -1,0 +1,9 @@
+{
+  "name": "easy-react-app",
+  "version": "0.1.0",
+  "description": "CLI tool for easily creating React applications",
+  "main": "index.js",
+  "repository": "git@github.com:AlanWei/easyreact.git",
+  "author": "Alan Wei <alanweichangran@gmail.com>",
+  "license": "MIT"
+}
